@@ -1,0 +1,18 @@
+.block {
+    width:100%;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.block .content {
+    z-index:1;
+    max-height:100%;
+}
+
+.block-100 {
+    min-height:100% !important;
+}
