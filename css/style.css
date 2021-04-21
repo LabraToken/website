@@ -16,7 +16,7 @@ p {
 a {
     z-index:1000;
     border: 0;
-    border:2px solid black;
+    border:1px solid black;
     margin:10px;
     display:block;
     padding:10px;
@@ -24,7 +24,7 @@ a {
     background: transparent; /* default color */
 
     /* "to left" / "to right" - affects initial color */
-    background: linear-gradient(to left, transparent calc(50% +1px), #ae8c69 calc(50% -1px)) right;
+    background: linear-gradient(to left, transparent 50%, #ae8c69 50%) right;
     background-size: 200%;
     transition: .8s ease-out;
     color:black;
@@ -44,7 +44,7 @@ a:visited {
 }
 
 #home {
-    background-image:linear-gradient(to bottom right, #FFF 50%, #6200EE 50%);
+    background-image:linear-gradient(to bottom right, #FFF 50.1%, #6200EE 50.1%);
     color:black;
 
     background-repeat: no-repeat;
