@@ -6,8 +6,7 @@ html, body {
     height:100%;
     font-family: 'Roboto', sans-serif!important;
     color:black!important;
-    background-color: rgb(0, 7, 22);
-    overflow: hidden;
+    background-color: #FFF;
 }
 
 p {
@@ -45,21 +44,13 @@ a:visited {
 }
 
 #home {
-    background-color: white;
+    background-image:linear-gradient(to bottom right, #FFF 50%, #6200EE 50%);
     color:black;
 
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: top center; 
-
-    -webkit-background-size:auto 100%;
-    -moz-background-size:auto 100%;
-    -o-background-size:auto 100%;
-    background-size:auto 100%;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
+    background-position: bottom;
+    background-size:100% 400px;
 }
 
 #home .content {
@@ -68,8 +59,8 @@ a:visited {
 
 #home .content #welcome > img {
     z-index:10;
-    width:40%;
-    height:40%;
+    width:30%;
+    height:30%;
     opacity:0.90;
 }
 
@@ -114,4 +105,18 @@ a:visited {
 @media only screen and (min-width: 768px) {
     a {display:inline}
     #tothemoon {display:block}
+
+    #navbar {
+        position:fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index:10000;
+        text-align: center;
+        height:50px;
+        width:100%;
+        background-color:#FFF;
+        border-bottom:5px solid #6200EE;
+    }
 }
