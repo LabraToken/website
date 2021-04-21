@@ -56,10 +56,10 @@ a:visited {
   z-index: 15!important;
 }
 
-#home .content #welcome>img {
+#home .content #welcome > img {
   z-index: 10;
-  width: 25%;
-  height: 25%;
+  width: 50%;
+  height: 50%;
   opacity: 0.90;
 }
 
@@ -217,6 +217,11 @@ a:visited {
 /* Desktop */
 
 @media only screen and (min-width: 768px) {
+  #home .content #welcome>img {
+    width: 25%;
+    height: 25%;
+  }
+
   a {
     display: inline
   }
