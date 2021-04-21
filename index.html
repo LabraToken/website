@@ -29,7 +29,7 @@
             <div class="content">
                 <div id="welcome">
                     <!-- <h1 id="labra_title" class="animate__animated animate__backInLeft">$LABRA</h1> -->
-                    <img src="img/logo.png" alt="Diamond logo" id="labra_logo" class="animate__animated animate__flip" />
+                    <img src="img/logo.png" alt="Diamond logo" id="labra_logo" class="animate__flip" />
                     <h1 id="labra_woof" class="animate__animated animate__backInRight">Labra "Labrador Retriever" ($LABRA) is a Deflationary DeFi - Meme Token, built by a Community of DeFi enthusiasts</h1>
                 </div>
             </div>
@@ -71,14 +71,15 @@
                 const value = Math.round((3.6 * speed *  percent));
 
 
-                $('#home').css({
-                    filter: `hue-rotate(${value}deg)`,
-                });
+                $( document ).ready(function() {
+                    $('#home').css({
+                        filter: `hue-rotate(${value}deg)`,
+                    });
 
-                $('#navbar').css({
-                    filter: `hue-rotate(${value}deg)`,
+                    $('#navbar').css({
+                        filter: `hue-rotate(${value}deg)`,
+                    });
                 });
-
             });
         </script>
     </body>
