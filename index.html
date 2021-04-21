@@ -18,14 +18,21 @@
         <link rel="manifest" href="./meta/site.webmanifest" />
     </head>
     <body>
-        <nav id="navbar">
-            <a href="https://app.uniswap.org/#/swap?inputCurrency=0x106d3c66d22d2dd0446df23d7f5960752994d600">Trade on Uniswap <i class="fas fa-handshake"></i></a>
-            <a href="https://twitter.com/labrafinance">Twitter <i class="fab fa-twitter"></i></a>
-            <a href="https://t.me/LABRAFINANCE">Our Official Telegram Chat <i class="fab fa-telegram-plane"></i></a>
-            <a href="mailto:contact@labra.finance">Contact us <i class="fas fa-envelope"></i></a>
-        </nav>
 
-        <div id="home" class="block block-100">
+        <header id="header">
+            <nav>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                    <li><a href="https://app.uniswap.org/#/swap?inputCurrency=0x106d3c66d22d2dd0446df23d7f5960752994d600">Trade on Uniswap <i class="fas fa-handshake"></i></a></li>
+                    <li><a href="https://twitter.com/labrafinance">Twitter <i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://t.me/LABRAFINANCE">Our Official Telegram Chat <i class="fab fa-telegram-plane"></i></a></li>
+                    <li><a href="mailto:contact@labra.finance">Contact us <i class="fas fa-envelope"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home" class="block block-100">
             <div class="content">
                 <div id="welcome">
                     <!-- <h1 id="labra_title" class="animate__animated animate__backInLeft">$LABRA</h1> -->
@@ -33,7 +40,7 @@
                     <h1 id="labra_woof" class="animate__animated animate__backInRight">Labra "Labrador Retriever" ($LABRA) is a Deflationary DeFi - Meme Token, built by a Community of DeFi enthusiasts</h1>
                 </div>
             </div>
-        </div>
+        </section>
 
         <svg id="tothemoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 600" preserveAspectRatio="none">
             <g id="rocket">
