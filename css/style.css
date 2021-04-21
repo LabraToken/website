@@ -44,7 +44,7 @@ a:visited {
 }
 
 #home {
-    background-image:linear-gradient(to bottom right, #FFF 50.1%, #6200EE 50.1%);
+    background-image:linear-gradient(to bottom right, #FFF 50.1%, #304FFE 50.1%);
     color:black;
 
     background-repeat: no-repeat;
@@ -59,8 +59,8 @@ a:visited {
 
 #home .content #welcome > img {
     z-index:10;
-    width:30%;
-    height:30%;
+    width:25%;
+    height:25%;
     opacity:0.90;
 }
 
@@ -113,6 +113,6 @@ a:visited {
         height:50px;
         width:100%;
         background-color:#FFF;
-        border-bottom:5px solid #6200EE;
+        border-bottom:5px solid #304FFE;
     }
 }
