@@ -18,6 +18,10 @@ body, #wrapper {
   background-color: #00aee9;
 }
 
+#home {
+  z-index:-1;
+}
+
 #home, #roadmap {
   background-color: #FFF;
 }
