@@ -14,11 +14,11 @@ body, #wrapper {
   overflow: hidden;
 }
 
-#tokenomics, #thanks {
+#tokenomics, #roadmap {
   background-color: #00aee9;
 }
 
-#home, #roadmap {
+#home, #howtobuy, #thanks {
   background-color: #FFF;
 }
 
@@ -26,6 +26,10 @@ body, #wrapper {
   font-size: 2em;
   max-width:500px;
   margin:0 auto;
+}
+
+#intro-quote a {
+  z-index:400;
 }
 
 #intro-quote blockquote {
@@ -46,8 +50,22 @@ body, #wrapper {
   z-index:2;
 }
 
-#roadmap {
+#howtobuy {
   z-index:3;
+}
+
+#roadmap {
+  z-index:4;
+}
+
+#howtobuy ul {
+  list-style-type: none;
+  text-align: left;
+  font-size:20px;
+}
+
+#howtobuy ul li {
+  padding:0px 5px;
 }
 
 #home .content {
@@ -59,6 +77,8 @@ body, #wrapper {
   width: 50%;
   height: 50%;
   opacity: 0.90;
+  margin-top:30px;
+
 }
 
 #tothemoon {
@@ -104,7 +124,7 @@ body, #wrapper {
   text-align: center;
 }
 
-#header a {
+#header a, #howtobuy a {
   z-index: 1000;
   border: 0;
   border: 1px solid black;
@@ -122,14 +142,14 @@ body, #wrapper {
   text-decoration: none;
 }
 
-#header a:hover {
+#header a:hover, #howtobuy a:hover {
   background-color: #FFF;
   color: black;
   cursor: pointer;
   background-position: left;
 }
 
-#header a:visited {
+#header a:visited, #howtobuy a:visited {
   color: black;
   text-decoration: none;
 }
@@ -229,6 +249,19 @@ body, #wrapper {
   top: 0;
 }
 
+#header .logo {
+  display: block;
+  float: left;
+  text-decoration: none;
+  width:60px;
+  height:60px;
+}
+
+img.logo {
+  margin:5px;
+  padding:5px;
+}
+
 @media (min-width: 48em) {
   #header li {
     display: inline-block;
@@ -246,7 +279,7 @@ body, #wrapper {
 /* Desktop */
 
 @media only screen and (min-width: 768px) {
-  #home .content #welcome>img {
+  #home .content #welcome > img {
     width: 25%;
     height: 25%;
   }
