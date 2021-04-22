@@ -146,7 +146,15 @@
                 // define movement of panels
                 const wipeAnimation = new TimelineMax()
                     // Tokenomics
-                    .fromTo("section#tokenomics", 1, {x:"35%", y:"95%", rotate:"-20deg"}, {x:"0%", y:"0%", rotate:"0deg", ease: Linear.easeNone})
+                    .fromTo(
+                        "section#tokenomics", 1, 
+                        {
+                            x:isDesktop ? "35%" : "100%",
+                            y:isDesktop ? "95%" : "0%",
+                            rotate:isDesktop ? "-20deg" : "0deg"
+                        },
+                        {x:"0%", y:"0%", rotate:"0deg",ease: Linear.easeNone}
+                    )
                     
                     //Supply appear
                     .fromTo("#token_supply", 1, {x:"100%", opacity:0, scale:0.1}, {x:"0%", opacity:1, scale:scale, y:"0%", rotate:"0deg", ease: Linear.easeNone})
