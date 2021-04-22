@@ -59,11 +59,9 @@
             <div id="anim-sections">
                 <section id="tokenomics" class="block block-100">
                     <div class="content">
-                        <h1>Tokenomics</h1>
-                        <h2>Ticker is $Labra</h2>
-                        <h2>Max Supply is 1000T, <a href="https://etherscan.io/tx/0x67c0afea48f2a73d0e8e196c490a7f899f99996bbafe0a20176f988e454e68aa">70% burned</a>, circulating is 300T</h2>
-                        <h2>No Presale!</h2>
-                        <h2>Holders rewarded with redistributed fees!</h2>
+                        <h1 id="token_supply">Max Supply is 1000T, <a href="https://etherscan.io/tx/0x67c0afea48f2a73d0e8e196c490a7f899f99996bbafe0a20176f988e454e68aa">70% burned</a>, circulating is 300T</h2>
+                        <h1 id="token_launch">No Presale!</h2>
+                        <h1 id="token_fees">Holders rewarded with redistributed fees!</h2>
                     </div>
                 </section>
         
@@ -143,16 +141,29 @@
                 // init
                 const controller = new ScrollMagic.Controller();
                 const isDesktop = window.matchMedia("(min-width: 768px)").matches
+                const scale = isDesktop ? 1.5 : 0.8;
 
                 // define movement of panels
                 const wipeAnimation = new TimelineMax()
+                    // Tokenomics
                     .fromTo("section#tokenomics", 1, {x:"35%", y:"95%", rotate:"-20deg"}, {x:"0%", y:"0%", rotate:"0deg", ease: Linear.easeNone})
+                    
+                    //Supply appear
+                    .fromTo("#token_supply", 1, {x:"100%", opacity:0, scale:0.1}, {x:"0%", opacity:1, scale:scale, y:"0%", rotate:"0deg", ease: Linear.easeNone})
+
+                    //Launch appear
+                    .fromTo("#token_launch", 1, {x:"100%", opacity:0, scale:0.1}, {x:"0%", opacity:1, scale:scale, y:"0%", rotate:"0deg", ease: Linear.easeNone})
+                    
+                    //Fees appear
+                    .fromTo("#token_fees", 1, {x:"100%", opacity:0, scale:0.1}, {x:"0%", opacity:1, scale:scale, y:"0%", rotate:"0deg", ease: Linear.easeNone})
+                    
+                    //Roadmap
                     .fromTo("section#roadmap", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
 
                 // create scene to pin and link animation
                 new ScrollMagic.Scene({
                         offset: isDesktop ? window.outerHeight - 80 : 0,
-                        duration: "200%"
+                        duration: "500%"
                     })
                     .setPin("#anim-sections")
                     .setTween(wipeAnimation)
