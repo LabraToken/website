@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/animate.css" />
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         
         <meta charset="utf-8" />
@@ -38,40 +39,42 @@
                 </ul>
             </nav>
         </header>
-
+        
         <div id="wrapper">
             <section id="home" class="block block-100">
                 <div class="content">
                     <div id="welcome">
                         <img src="img/logo.png" alt="Diamond logo" id="labra_logo" class="animate__flip" />
-                        <h1 id="labra_woof" class="animate__animated animate__backInRight">Labra "Labrador Retriever" ($LABRA) is a Deflationary DeFi - Meme Token, built by a Community of DeFi enthusiasts</h1>
                     </div>
+
+                    <div id="intro-quote">
+                        <blockquote class="animate__animated animate__fadeInUp">
+                            Labra "Labrador Retriever" ($LABRA) is a Deflationary DeFi - Meme Token, built by a Community of DeFi enthusiasts
+                        </blockquote>
+                    </div>
+
                 </div>
             </section>
-
+    
             <div id="anim-sections">
                 <section id="tokenomics" class="block block-100">
                     <div class="content">
-                        <div id="welcome">
-                            <h1>Tokenomics</h1>
-                        </div>
+                        <h1>Tokenomics</h1>
+                        <p>Details coming, this website takes time to code :D</p>
                     </div>
                 </section>
         
                 <section id="roadmap" class="block block-100">
                     <div class="content">
-                        <div id="welcome">
-                            <h1 id="labra_woof">Roadmap</h1>
-                        </div>
+                        <h1>Roadmap</h1>
+                        <p>Details coming, this website takes time to code :D</p>
                     </div>
                 </section>
             </div>
-
+    
             <section id="thanks" class="block block-100">
                 <div class="content">
-                    <div id="welcome">
-                        <h1 id="labra_woof">Thank you!</h1>
-                    </div>
+                        <h1>Thank you!</h1>
                 </div>
             </section>
         </div>
@@ -89,7 +92,7 @@
                 <path fill="#F0F0F0" d="M173.2 640.3c-18.8-18.2-72-23.2-94.7-4a2.6 2.6 0 00-1 2.2l3 25a2.6 2.6 0 001.4 2c26.4 13.6 77-3.3 91.3-25.2z"/>
                 <path fill="#ae8c69" d="M173.2 640.3a63.6 63.6 0 00-30.8-14c-.4-6.5 4 34.5 4 34.5a63.7 63.7 0 0026.8-20.5z"/>
                 <circle cx="123.2" cy="646" r="11.7" fill="#ae8c69" transform="rotate(-49.2 123.2 646)"/>
-                <path fill="#304FFE" d="M125.7 655a9.4 9.4 0 116.6-11.5 9.4 9.4 0 01-6.6 11.6z"/>
+                <path fill="#00aee9" d="M125.7 655a9.4 9.4 0 116.6-11.5 9.4 9.4 0 01-6.6 11.6z"/>
             </g>
         </svg>
         
@@ -101,28 +104,35 @@
             }, 2500);
         </script>
 
-        <!-- <script>
+        <script>
             $(function () { // wait for document ready
                 // init
-                var controller = new ScrollMagic.Controller();
+                const controller = new ScrollMagic.Controller();
+                const moveup = document.getElementById('welcome').clientHeight;
+                const isDesktop = window.matchMedia("(min-width: 768px)").matches
+
+                console.log(isDesktop)
+
+                if (!isDesktop)
+                    return false;
 
                 // define movement of panels
                 var wipeAnimation = new TimelineMax()
-                    .fromTo("section#tokenomics", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-                    .fromTo("section#roadmap",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+                    .fromTo("#welcome", 1, {opacity:1}, {opacity:0, ease: Linear.easeNone})
+                    .fromTo("#intro-quote", 1, {scale:1}, {scale:1.5, paddingBottom:`${moveup/2}px`, ease: Linear.easeNone})  // in from left
 
                 // create scene to pin and link animation
                 new ScrollMagic.Scene({
-                        triggerElement: "#wrapper",
-                        triggerHook: "onLeave",
-                        duration: "200%"
+                        offset:0,
+                        duration: "100%"
                     })
-                    .setPin("#wrapper")
                     .setTween(wipeAnimation)
+                    .setPin("#wrapper")
+                    // .setPin("#welcome")
                     .addIndicators() // add indicators (requires plugin)
                     .addTo(controller);
             });
-        </script> -->
+        </script>
 
         <script>
             $(function () { // wait for document ready
@@ -131,7 +141,7 @@
 
                 // define movement of panels
                 var wipeAnimation = new TimelineMax()
-                    .fromTo("section#tokenomics", 1, {x:"100%"}, {x:"0%", ease: Linear.easeNone})
+                    .fromTo("section#tokenomics", 1, {x:"35%", y:"90%", rotate:"-20deg"}, {x:"0%", y:"0%", rotate:"0deg", ease: Linear.easeNone})
                     .fromTo("section#roadmap", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
 
                 // create scene to pin and link animation
@@ -142,27 +152,8 @@
                     })
                     .setPin("#anim-sections")
                     .setTween(wipeAnimation)
-                    // .addIndicators() // add indicators (requires plugin)
+                    .addIndicators() // add indicators (requires plugin)
                     .addTo(controller);
-            });
-        </script>
-
-        <script>
-            $(window).scroll(function() {
-                var home = document.getElementById('home');
-                let height = home.offsetHeight;
-                let scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
-                let percent = Math.floor(scrollTop / height * 100);
-                let speed = 0.3;
-
-                const value = Math.round((3.6 * speed *  percent));
-
-
-                $( document ).ready(function() {
-                    $('#header').css({
-                        filter: `hue-rotate(${value}deg)`,
-                    });
-                });
             });
         </script>
     </body>

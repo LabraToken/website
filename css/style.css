@@ -14,26 +14,39 @@ body, #wrapper {
   overflow: hidden;
 }
 
-body {
-  background-image: linear-gradient(to bottom right, #FFF 75%, #304FFE 75.2%);
-  color: black;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: bottom;
-  background-size: 100% 400px;
+#tokenomics, #thanks {
+  background-color: #00aee9;
 }
 
-#home {
-  z-index:-1;
+#home, #roadmap {
+  background-color: #FFF;
+}
+
+#intro-quote {
+  font-size: 2em;
+  max-width:500px;
+  margin:0 auto;
+}
+
+#intro-quote blockquote {
+  /* margin:0!important; */
+}
+
+#tokenomics .row {
+  font-size: 20px;
+}
+
+#tokenomics .col-lg-3 .col-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #tokenomics {
-  background-color: #304FFE;
   z-index:2;
 }
 
 #roadmap {
-  background-color: #F00;
   z-index:3;
 }
 
@@ -52,7 +65,7 @@ body {
   z-index: 0;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: 60px;
   left: 0;
   position: absolute;
   display: none;
@@ -83,11 +96,42 @@ body {
 
 #header {
   background-color: #fff;
-  border-bottom: 2.5px solid #304FFE;
+  border-bottom: 2.5px solid #00aee9;
   position: fixed;
+  top:0;
   width: 100%;
   z-index: 1000;
   text-align: center;
+}
+
+#header a {
+  z-index: 1000;
+  border: 0;
+  border: 1px solid black;
+  margin: 10px;
+  display: block;
+  padding: 10px;
+  border-radius: 100px;
+  background: transparent;
+  /* default color */
+  /* "to left" / "to right" - affects initial color */
+  background: linear-gradient(to left, transparent 50%, #ae8c69 50%) right;
+  background-size: 200%;
+  transition: .8s ease-out;
+  color: black;
+  text-decoration: none;
+}
+
+#header a:hover {
+  background-color: #FFF;
+  color: black;
+  cursor: pointer;
+  background-position: left;
+}
+
+#header a:visited {
+  color: black;
+  text-decoration: none;
 }
 
 #header ul {
@@ -165,7 +209,7 @@ body {
 }
 
 #header .menu-btn:checked~.menu {
-  max-height: 260px;
+  max-height: 270px;
 }
 
 #header .menu-btn:checked~.menu-icon .navicon {
