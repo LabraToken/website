@@ -137,16 +137,16 @@
         <script>
             $(function () { // wait for document ready
                 // init
-                var controller = new ScrollMagic.Controller();
+                const controller = new ScrollMagic.Controller();
 
                 // define movement of panels
-                var wipeAnimation = new TimelineMax()
-                    .fromTo("section#tokenomics", 1, {x:"35%", y:"90%", rotate:"-20deg"}, {x:"0%", y:"0%", rotate:"0deg", ease: Linear.easeNone})
+                const wipeAnimation = new TimelineMax()
+                    .fromTo("section#tokenomics", 1, {x:"35%", y:"95%", rotate:"-20deg"}, {x:"0%", y:"0%", rotate:"0deg", ease: Linear.easeNone})
                     .fromTo("section#roadmap", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
 
                 // create scene to pin and link animation
                 new ScrollMagic.Scene({
-                        triggerElement: "#home",
+                        offset: window.outerHeight - 80,
                         triggerHook: "onLeave",
                         duration: "200%"
                     })
