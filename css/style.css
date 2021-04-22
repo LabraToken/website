@@ -61,7 +61,8 @@ body, #wrapper {
 #howtobuy ul {
   list-style-type: none;
   text-align: left;
-  font-size:20px;
+  font-size:12px;
+  padding:10px;
 }
 
 #howtobuy ul li {
@@ -289,5 +290,9 @@ img.logo {
   }
   #tothemoon {
     display: block
+  }
+
+  #howtobuy ul {
+    font-size:20px;
   }
 }
