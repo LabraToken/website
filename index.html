@@ -212,10 +212,22 @@
         </script>
 
         <script>
-            particlesJS.load('home', 'assets/particles.json', function() {
+            const isDesktop = window.matchMedia("(min-width: 768px)").matches
+
+            particlesJS.load('home', isDesktop ? 'assets/particles.json' : 'assets/particles-mobile.json', function() {
                 const canvas = document.getElementsByClassName('particles-js-canvas-el')[0];
                 canvas.style.position = "absolute";
             });
+        </script>
+
+        <script>
+            const shouldReload = !isDesktop && !sessionStorage.getItem('hello');
+            console.log('shouldReload', shouldReload)
+            
+            if (shouldReload) {
+                sessionStorage.setItem('hello', true);
+                location.reload();
+            }
         </script>
     </body>
 </html>

@@ -23,7 +23,7 @@ body, #wrapper {
 }
 
 #intro-quote {
-  font-size: 2em;
+  font-size: 1.8em;
   max-width:500px;
   margin:0 auto;
 }
@@ -294,5 +294,9 @@ img.logo {
 
   #howtobuy ul {
     font-size:20px;
+  }
+
+  #intro-quote {
+    font-size: 2em;
   }
 }
