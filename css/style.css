@@ -506,8 +506,6 @@ input[data-description="9"]:checked ~ #timeline-descriptions-wrapper p[data-desc
     justify-content: center;
     width: 400px;
     height: auto;
-    margin-top: 15vh;
-    padding-bottom: 30px;
   }
 
   input, .dot-info {
