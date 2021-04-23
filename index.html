@@ -275,7 +275,7 @@
                 // create scene to pin and link animation
                 new ScrollMagic.Scene({
                         offset: isDesktop ? window.outerHeight - 80 : 0,
-                        duration: "800%"
+                        duration: isDesktop ? "800%" : "400%"
                     })
                     .setPin("#anim-sections")
                     .setTween(wipeAnimation)
