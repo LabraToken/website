@@ -387,6 +387,11 @@ input:checked::after {
 input:checked ~ input, input:checked ~ input::before, input:checked ~ input::after {
   background-color: #AEB6BF;
 }
+
+input:checked ~ input, input[type="checkbox"], input[type="radio"] {
+  margin-bottom: 50px;
+  margin-right: 10px;
+}
 input:checked + .dot-info span {
   font-size: 14px;
   font-weight: bold;
