@@ -417,7 +417,7 @@ input:checked + .dot-info span {
   transform: translateX(-50%);
 }
 .dot-info span.label {
-  top: -55px;
+  top: -80px;
   left: -5px;
   transform: rotateZ(-45deg);
   width: 70px;
