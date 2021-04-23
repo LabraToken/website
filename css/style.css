@@ -23,6 +23,7 @@ body, #wrapper {
 }
 
 #intro-quote {
+  text-align: center;
   font-size: 1.8em;
   max-width:500px;
   margin:0 auto;
@@ -125,7 +126,7 @@ body, #wrapper {
   text-align: center;
 }
 
-#header a, #howtobuy a {
+#header a, #howtobuy a, #home a {
   z-index: 1000;
   border: 0;
   border: 1px solid black;
@@ -143,14 +144,14 @@ body, #wrapper {
   text-decoration: none;
 }
 
-#header a:hover, #howtobuy a:hover {
+#header a:hover, #howtobuy a:hover, #home a:hover {
   background-color: #FFF;
   color: black;
   cursor: pointer;
   background-position: left;
 }
 
-#header a:visited, #howtobuy a:visited {
+#header a:visited, #howtobuy a:visited, #home a:visited {
   color: black;
   text-decoration: none;
 }
@@ -261,6 +262,10 @@ body, #wrapper {
 img.logo {
   margin:5px;
   padding:5px;
+}
+
+#home a {
+  display:inline!important;
 }
 
 @media (min-width: 48em) {
