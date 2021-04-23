@@ -9,6 +9,10 @@
     position: absolute;
 }
 
+.block.relative {
+    position:relative!important;
+}
+
 .block .content {
     z-index:1;
     max-height:100%;

@@ -14,7 +14,7 @@ body, #wrapper {
   overflow: hidden;
 }
 
-#tokenomics, #roadmap {
+#tokenomics, #roadmap, #careers {
   background-color: #00aee9;
 }
 
@@ -134,7 +134,7 @@ body, #wrapper {
   text-align: center;
 }
 
-#header a, #howtobuy a, #home a, #community a {
+#header a, #howtobuy a, #home a, #community a, #careers a {
   z-index: 1000;
   border: 0;
   border: 1px solid black;
@@ -152,14 +152,14 @@ body, #wrapper {
   text-decoration: none;
 }
 
-#header a:hover, #howtobuy a:hover, #home a:hover, #community a:hover {
+#header a:hover, #howtobuy a:hover, #home a:hover, #community a:hover, #careers a:hover {
   background-color: #FFF;
   color: black;
   cursor: pointer;
   background-position: left;
 }
 
-#header a:visited, #howtobuy a:visited, #home a:visited, #community a:visited {
+#header a:visited, #howtobuy a:visited, #home a:visited, #community a:visited, #careers a:visited {
   color: black;
   text-decoration: none;
 }
