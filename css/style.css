@@ -573,3 +573,47 @@ input[data-description="9"]:checked ~ #timeline-descriptions-wrapper p[data-desc
     width: 300px;
   }
 }
+
+/* divider */
+.custom-shape-divider-bottom-1619174670 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1619174670 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 74px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1619174670 .shape-fill {
+  fill: #00AEE9;
+}
+
+.custom-shape-divider-top-1619174770 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1619174770 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 74px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1619174770 .shape-fill {
+  fill: #00AEE9;
+}
