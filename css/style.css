@@ -12,6 +12,7 @@ body, #wrapper {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  inset: 0px auto auto 0px!important;
 }
 
 #tokenomics, #roadmap, #careers {
