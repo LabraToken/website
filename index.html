@@ -317,6 +317,7 @@
                     )
                     
                     //Supply appear
+                    .fromTo("#token_supply", 1, {display:"block"}, {display:"block"})
                     .fromTo("#token_supply", 1, {opacity:1, scale:scale}, {opacity:1, scale:0, ease: Linear.easeNone})
                     .fromTo("#token_supply", 1, {display:"block"}, {display:"none"})
 
@@ -334,7 +335,7 @@
                 // create scene to pin and link animation
                 new ScrollMagic.Scene({
                         offset: isDesktop ? window.outerHeight - 80 : 0,
-                        duration: isDesktop ? "1000%" : "400%"
+                        duration: isDesktop ? "1500%" : "400%"
                     })
                     .setPin("#anim-sections")
                     .setTween(wipeAnimation)
