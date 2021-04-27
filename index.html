@@ -40,6 +40,9 @@
                     <li><a href="mailto:contact@labra.finance">Contact us <i class="fas fa-envelope"></i></a></li>
                 </ul>
             </nav>
+            <marquee id="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                Now listed on CoinGecko!
+            </marquee>
         </header>
         
         <div id="wrapper">
@@ -180,15 +183,26 @@
                 </section>
             </div>
     
-            <section id="community" class="block block-100 relative">
+            <section id="community" class="block block-100-min relative">
                 <div class="content">
-                        <h1>We're decentralized and community driven!</h1>
-                        <h2>Join us</h2>
-                        <a target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=0x106d3c66d22d2dd0446df23d7f5960752994d600">Buy on Uniswap <i class="fas fa-handshake"></i></a>
-                        <a target="_blank" href="https://twitter.com/labrafinance">Twitter <i class="fab fa-twitter"></i></a>
-                        <a target="_blank" href="https://t.me/LABRAFINANCE">Our Official Telegram Chat <i class="fab fa-telegram-plane"></i></a>
-                        <a target="_blank" href="https://github.com/LabraToken">GitHub <i class="fab fa-github"></i></a>
-                        <a href="mailto:contact@labra.finance">Contact us <i class="fas fa-envelope"></i></a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1>We're decentralized and community driven!</h1>
+                                <h2>Join us</h2>
+                                <a target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=0x106d3c66d22d2dd0446df23d7f5960752994d600">Buy on Uniswap <i class="fas fa-handshake"></i></a>
+                                <a target="_blank" href="https://twitter.com/labrafinance">Twitter <i class="fab fa-twitter"></i></a>
+                                <a target="_blank" href="https://t.me/LABRAFINANCE">Our Official Telegram Chat <i class="fab fa-telegram-plane"></i></a>
+                                <a target="_blank" href="https://github.com/LabraToken">GitHub <i class="fab fa-github"></i></a>
+                                <a href="mailto:contact@labra.finance">Contact us <i class="fas fa-envelope"></i></a>                    
+                            </div>
+                            <div class="col-md-6">
+                                <h1>Latest news!</h1>
+                                <a class="twitter-timeline" data-width="400" data-tweet-limit="1" href="https://twitter.com/LabraFinance?ref_src=twsrc%5Etfw">Tweets by LabraFinance</a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="custom-shape-divider-bottom-1619174670">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -199,7 +213,7 @@
                 </div>
             </section>
 
-            <footer id="careers" class="block block-50 relative">
+            <footer id="careers" class="block block-50">
                 <div class="content">
                     <h1>Careers</h1>
                     <h2>We need your skills to prove we have the best dog!</h2>
@@ -321,6 +335,19 @@
             if (shouldReload) {
                 sessionStorage.setItem('hello', true);
                 location.reload();
+            }
+        </script>
+
+
+        <script>
+            $('#community').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function () {
+                customizeTweetMedia();
+            });
+
+            var customizeTweetMedia = function () {
+                // CSS Overrides
+                $('#community').find('.twitter-timeline').contents().find('.timeline-Header').css('display', 'none');
+                $('#community').find('.twitter-timeline').contents().find('.timeline-Footer').css('display', 'none');
             }
         </script>
     </body>

@@ -8,6 +8,12 @@
     position: absolute;
 }
 
+.block-nj {
+    width:100%;
+    text-align: center;
+    position: absolute;
+}
+
 .block.relative {
     position:relative!important;
 }
@@ -22,6 +28,10 @@
     height:100% !important;
 }
 
+.block-100-min {
+    min-height: 100%;
+}
+
 .block-50 {
     height:50% !important;
 }
@@ -29,4 +39,3 @@
 p {
     font-size: 20px;
 }
-  
