@@ -73,13 +73,29 @@
                 <section id="tokenomics" class="block block-100">
                     <div class="content">
                         <div id="token_supply">
-                            <h1>Max Supply is 1000T, <a target="_blank" href="https://etherscan.io/tx/0x67c0afea48f2a73d0e8e196c490a7f899f99996bbafe0a20176f988e454e68aa">70% burned</a>, circulating is 300T</h1>
+                            <h1>Tokenomics</h1>
+                            <ul>
+                                <li>Maximum supply: 1000 Trillion LABRA</li>
+                                <li>Burned Supply: 700 Trillion LABRA</li>
+                                <li>Circulating Supply: 300 Trillion LABRA</li>
+                                <li>Reserved: 5% for Marketing, cost of Developers</li>
+                                <li>Proof of burn on <a target="_blank" href="https://etherscan.io/tx/0x67c0afea48f2a73d0e8e196c490a7f899f99996bbafe0a20176f988e454e68aa">Etherscan</a></li>
+                            </ul>
                         </div>
                         <div id="token_launch">
-                            <h1>No Presale!</h1>
+                            <h1>Stake & Return</h1>
+                            <ul>
+                                <li>Each transaction has a 2% fee. 1% is burned, and 1% gets redistributed to all holders.</li>
+                                <li>The 2% fee on every swap is to prevent price manipulation and encourage holding.</li>
+                            </ul>
                         </div>
                         <div id="token_fees">
-                            <h1>Holders rewarded with redistributed fees!</h1>
+                            <h1>Community Based!</h1>
+                            <ul>
+                                <li>Labra is entirely community based.</li>
+                                <li>Join our awesome community and help Labra grow!</li>
+                            </ul>
+                            <a target="_blank" href="https://t.me/LABRAFINANCE">Join us on Telegram <i class="fab fa-telegram-plane"></i></a>
                         </div>
                     </div>
                 </section>
@@ -301,13 +317,15 @@
                     )
                     
                     //Supply appear
-                    .fromTo("#token_supply", 1, {x:"100%", opacity:0, scale:0.1}, {x:"0%", opacity:1, scale:scale, y:"0%", rotate:"0deg", ease: Linear.easeNone})
+                    .fromTo("#token_supply", 1, {opacity:1, scale:scale}, {opacity:1, scale:0, ease: Linear.easeNone})
+                    .fromTo("#token_supply", 1, {display:"block"}, {display:"none"})
 
                     //Launch appear
-                    .fromTo("#token_launch", 1, {x:"100%", opacity:0, scale:0.1}, {x:"0%", opacity:1, scale:scale, y:"0%", rotate:"0deg", ease: Linear.easeNone})
-                    
+                    .fromTo("#token_launch", 1, {display:"none", opacity:0, scale:0}, {display:"block", opacity:1, scale:scale, ease: Linear.easeNone})
+                    .fromTo("#token_launch", 1, {display:"block", opacity:1}, {display:"none", opacity:0})
+
                     //Fees appear
-                    .fromTo("#token_fees", 1, {x:"100%", opacity:0, scale:0.1}, {x:"0%", opacity:1, scale:scale, y:"0%", rotate:"0deg", ease: Linear.easeNone})
+                    .fromTo("#token_fees", 1, {display:"none", opacity:0, scale:0}, {display:"block", opacity:1, scale:scale, ease: Linear.easeNone})
                     
                     //Roadmap
                     .fromTo("section#howtobuy", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
@@ -316,7 +334,7 @@
                 // create scene to pin and link animation
                 new ScrollMagic.Scene({
                         offset: isDesktop ? window.outerHeight - 80 : 0,
-                        duration: isDesktop ? "800%" : "400%"
+                        duration: isDesktop ? "1000%" : "400%"
                     })
                     .setPin("#anim-sections")
                     .setTween(wipeAnimation)
