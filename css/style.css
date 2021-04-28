@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-html,
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');html,
 body, #wrapper {
   margin: 0px;
   padding: 0px;
   height: 100%;
-  font-family: 'Roboto', sans-serif!important;
+  font-family: 'Exo', sans-serif!important;
   color: black!important;
 }
 
