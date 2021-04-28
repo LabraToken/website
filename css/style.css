@@ -35,6 +35,10 @@ body, #wrapper {
   color:#FFF;
 }
 
+#home a.labra_button {
+  display:inline-block!important;
+}
+
 #home, #howtobuy, #community {
   background-color: #FFF;
 }
