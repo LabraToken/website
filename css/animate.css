@@ -2506,7 +2506,6 @@ print {
 		transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
 		-webkit-animation-timing-function: ease-out;
 		animation-timing-function: ease-out;
-		filter:hue-rotate(0deg);
 	}
 	40% {
 		-webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
@@ -2531,7 +2530,6 @@ print {
 		transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
 		-webkit-animation-timing-function: ease-in;
 		animation-timing-function: ease-in;
-		filter:hue-rotate(360deg);
 	}
 }
 
