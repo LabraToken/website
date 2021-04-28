@@ -25,6 +25,7 @@ body, #wrapper {
   height: 100%;
   overflow: hidden;
   inset: 0px auto auto 0px!important;
+  /* margin-top:100%!important; */
 }
 
 #tokenomics, #roadmap, #careers {
@@ -345,6 +346,10 @@ img.logo {
 
   .dot-info span.label {
     width:100px!important;
+  }
+
+  #anim-sections {
+    margin-top:auto;
   }
 }
 

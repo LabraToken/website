@@ -306,7 +306,10 @@
                 const scale = isDesktop ? 1.5 : 0.8;
 
                 // define movement of panels
-                const wipeAnimation = new TimelineMax()
+                var wipeAnimation;
+                
+                if (isDesktop) {
+                    wipeAnimation = new TimelineMax()
                     // Tokenomics
                     .fromTo(
                         "section#tokenomics", 1, 
@@ -332,15 +335,16 @@
                     .fromTo("section#howtobuy", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
                     .fromTo("section#roadmap", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
 
-                // create scene to pin and link animation
-                new ScrollMagic.Scene({
-                        offset: isDesktop ? window.outerHeight - 80 : 0,
-                        duration: isDesktop ? "1500%" : "400%"
-                    })
-                    .setPin("#anim-sections")
-                    .setTween(wipeAnimation)
-                    // .addIndicators() // add indicators (requires plugin)
-                    .addTo(controller);
+                    // create scene to pin and link animation
+                    new ScrollMagic.Scene({
+                            offset: isDesktop ? window.outerHeight - 80 : 0,
+                            duration: isDesktop ? "1000%" : "600%"
+                        })
+                        .setPin("#anim-sections")
+                        .setTween(wipeAnimation)
+                        // .addIndicators() // add indicators (requires plugin)
+                        .addTo(controller);
+                    }
             });
         </script>
 
