@@ -50,6 +50,11 @@ body, #wrapper {
   margin:0 auto;
 }
 
+#intro-quote {
+  max-width:500px;
+  margin: 0 auto;
+}
+
 #intro-quote a {
   z-index:400;
 }
