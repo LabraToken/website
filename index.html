@@ -41,7 +41,7 @@
                 </ul>
             </nav>
             <marquee id="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-                Now listed on CoinGecko!
+                Now listed on CoinMarketCap!
             </marquee>
         </header>
         
@@ -124,83 +124,6 @@
                             </div>
                         </div>
                         <a target="_blank" class="labra_button" href="https://app.uniswap.org/#/swap?inputCurrency=0x106d3c66d22d2dd0446df23d7f5960752994d600">Buy on Uniswap</a>
-                    </div>
-                </section>
-
-                <section id="roadmap" class="block block-100">
-                    <div class="content">
-                        <h1>Mars Map</h1>
-                        <div class="flex-parent">
-                            <div class="input-flex-container">
-                                <input type="radio" name="timeline-dot" data-description="0">
-                                <div class="dot-info" data-description="0">
-                                    <span class="year">Launch</span>
-                                    <span class="label">Birth of Labra</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="1">
-                                <div class="dot-info" data-description="1">
-                                    <span class="year">Day1</span>
-                                    <span class="label">Barking Hello</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="2">
-                                <div class="dot-info" data-description="2">
-                                    <span class="year">Day2</span>
-                                    <span class="label">Getting groomed</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="3">
-                                <div class="dot-info" data-description="3">
-                                    <span class="year">Day3</span>
-                                    <span class="label">Getting noticed</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="4" checked>
-                                <div class="dot-info" data-description="4">
-                                    <span class="year">Week2</span>
-                                    <span class="label">Hold the leash</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="5">
-                                <div class="dot-info" data-description="5">
-                                    <span class="year">Week3</span>
-                                    <span class="label">Grabbing a treat</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="6">
-                                <div class="dot-info" data-description="6">
-                                    <span class="year">FOMO</span>
-                                    <span class="label">Throw a ball!</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="7">
-                                <div class="dot-info" data-description="7">
-                                    <span class="year">MOON</span>
-                                    <span class="label">Labra-stronaut!</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="8">
-                                <div class="dot-info" data-description="8">
-                                    <span class="year">SUMMER</span>
-                                    <span class="label">Alt Season!</span>
-                                </div>
-                                <input type="radio" name="timeline-dot" data-description="9">
-                                <div class="dot-info" data-description="9">
-                                    <span class="year">MARS</span>
-                                    <span class="label">Lambo</span>
-                                </div>
-                                <div id="timeline-descriptions-wrapper">
-                                    <p data-description="0">
-                                        Submitting contract, locking liquidity, <a target="_blank" href="https://etherscan.io/tx/0x67c0afea48f2a73d0e8e196c490a7f899f99996bbafe0a20176f988e454e68aa">and burning 70% of the supply</a>.
-                                    </p>
-                                    <p data-description="1">
-                                        Creating social medias: <a target="_blank" href="https://t.me/LABRAFINANCE">telegram</a>, <a target="_blank" href="https://twitter.com/labrafinance">twitter</a>, <a target="_blank" href="https://github.com/LabraToken">github</a>.<br/>
-                                        Setting up domain.
-                                    </p>
-                                    <p data-description="2">Finalizing the V1 of the website.</p>
-                                    <p data-description="3">Starting marketing campaign.</p>
-                                    <p data-description="4">There may be some movement here.</p>
-                                    <p data-description="5">Investing more in marketing. Holders rewarded.</p>
-                                    <p data-description="6">Spreading the word hard.</p>
-                                    <p data-description="7">Bring a spacesuit.</p>
-                                    <p data-description="8">It's alt season, take a bath.</p>
-                                    <p data-description="9">First Dog with a driving license.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </div>
@@ -333,7 +256,7 @@
                     
                     //Roadmap
                     .fromTo("section#howtobuy", 1, {x:"-100%"}, {x:"0%", ease: Linear.easeNone})
-                    .fromTo("section#roadmap", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
+                    // .fromTo("section#roadmap", 1, {y:"100%"}, {y:"0%", ease: Linear.easeNone})
 
                     // create scene to pin and link animation
                     new ScrollMagic.Scene({
